@@ -1,0 +1,195 @@
+#
+#	Diskdefs for RC2014 and other systems using Grant Searle's
+#       Compact Flash disk format.
+#
+#	Not thoroughly tested yet -- Gordon Burditt, gordon@burditt.org
+#	You probably won't ruin anything trying to *READ* the image.
+#
+#	Changed definition names to more generic "gscpm". - Jon Langseth
+#
+#       Append the contents of this file to /etc/cpmtools/diskdefs
+#
+#	128 MB Flash => Drives A: thru P:
+#	Each drive has 512 tracks except drive P:, which has 128
+#	Each drive has its own format: gscpm-a thru gscpm-p
+#	64 MB Flash => Drives A: thru H:
+#	Each drive has 512 tracks except drive H: which has ???
+#	Each drive has its own format: gscpm-a thru gscpm-g, 
+#	plus gscpm-h64
+#
+#	Note:  the best way to test this is to run:
+#	fsck.cpm -f gscpm-<drive> <image_filename>
+#	on each drive of a known or suspected good image.
+#	Don't be too quick to let it correct errors.
+
+diskdef gscpm-a
+  seclen 512
+  tracks 512
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 1
+  os 2.2
+end
+
+diskdef gscpm-b
+  seclen 512
+  tracks 1024
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 512
+  os 2.2
+end
+
+diskdef gscpm-c
+  seclen 512
+  tracks 1536
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 1024
+  os 2.2
+end
+
+diskdef gscpm-d
+  seclen 512
+  tracks 2048
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 1536
+  os 2.2
+end
+
+diskdef gscpm-e
+  seclen 512
+  tracks 2560
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 2048
+  os 2.2
+end
+
+diskdef gscpm-f
+  seclen 512
+  tracks 3072
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 2560
+  os 2.2
+end
+
+diskdef gscpm-g
+  seclen 512
+  tracks 3584
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 3072
+  os 2.2
+end
+
+diskdef gscpm-h
+  seclen 512
+  tracks 4096
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 3584
+  os 2.2
+end
+
+#diskdef gscpm-h64
+#  seclen 512
+# Value of tracks is too large here
+#  tracks 4096
+#  sectrk 32
+#  blocksize 4096
+#  maxdir 512
+#  boottrk 3584
+#  os 2.2
+#end
+
+diskdef gscpm-i
+  seclen 512
+  tracks 4608
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 4096
+  os 2.2
+end
+
+diskdef gscpm-j
+  seclen 512
+  tracks 5120
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 4608
+  os 2.2
+end
+
+diskdef gscpm-k
+  seclen 512
+  tracks 5632
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 5120
+  os 2.2
+end
+
+diskdef gscpm-l
+  seclen 512
+  tracks 6144
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 5632
+  os 2.2
+end
+
+diskdef gscpm-m
+  seclen 512
+  tracks 6656
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 6144
+  os 2.2
+end
+
+diskdef gscpm-n
+  seclen 512
+  tracks 7168
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 6656
+  os 2.2
+end
+
+diskdef gscpm-o
+  seclen 512
+  tracks 7680
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 7168
+  os 2.2
+end
+
+diskdef gscpm-p
+  seclen 512
+  tracks 7808
+  sectrk 32
+  blocksize 4096
+  maxdir 512
+  boottrk 7680
+  os 2.2
+end
+

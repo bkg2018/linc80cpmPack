@@ -1,0 +1,9 @@
+LBREXT.COM is used to extract member files from libraries (*.LBR).  Type it
+alone for a help screen that shows its usage.  "LBREXT LBRNAME DU:*.* /U" will
+extract and uncompress (because of option '/U') all member files, placing the
+resulting files in user area 'U' of drive 'D'.
+
+If you have an individual crunched file (indicated by a 'Z' as the middle
+character of the file type), you can uncrunch it using the utility
+UNCRUNCH.COM.  Type UNCRUNCH alone for a usage message.
+
